@@ -279,7 +279,7 @@
       '</div></article><article class="progress-panel" style="margin-top:14px"><h3>Ringkasan latihan</h3><div class="progress-detail-list">' +
       '<div class="progress-detail-row"><span>Total percobaan</span><small>' + state.attempts + '</small></div>' +
       '<div class="progress-detail-row"><span>Soal sudah dicoba</span><small>' + answered + ' / ' + questions.length + '</small></div>' +
-      '<div class="progress-detail-row"><span>Jawaban tepat terakhir tersimpan</span><small>' + correct + '</small></div></div></article>';
+      '<div class="progress-detail-row"><span>Jawaban tersimpan yang tepat</span><small>' + correct + '</small></div></div></article>';
   }
 
   function setTheme(theme) {
