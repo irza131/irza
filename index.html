@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#111114">
+<title>Irza Learning — Jalur Belajar TKA Fisika</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><div class="brand-mark atom-mark" aria-hidden="true"><span class="logo-orbit logo-orbit-a"><i></i></span><span class="logo-orbit logo-orbit-b"><i></i></span><span class="logo-orbit logo-orbit-c"><i></i></span><b>Φ</b></div><div><strong>IRZA LEARNING</strong><small>FISIKA · TKA JOURNEY</small></div></div>
+  <div class="top-actions"><span class="exam-pill">TARGET TKA <b>26 OKT</b></span><button class="icon-btn" id="progressToggle" aria-label="Lihat progres">◔</button></div>
+</header>
+<main>
+  <section class="hero-shell">
+    <div class="hero">
+      <div class="formula-wall" aria-hidden="true">
+        <span class="formula formula-a">F = ma</span><span class="formula formula-b">E = mc²</span>
+        <span class="formula formula-c">v = v₀ + at</span><span class="formula formula-d">ΣF = ma</span>
+        <span class="formula formula-e">p = mv</span><span class="formula formula-f">Q = mcΔT</span>
+        <span class="formula formula-g">λ = v/f</span><span class="formula formula-h">PV = nRT</span>
+        <span class="formula formula-i">W = F s cos θ</span><span class="formula formula-j">aₛ = v²/r</span>
+        <span class="formula formula-k">V = IR</span><span class="formula formula-l">P = VI</span>
+        <span class="formula formula-m">Eₖ = ½mv²</span><span class="formula formula-n">s = v₀t + ½at²</span>
+        <span class="formula formula-o">F = kx</span><span class="formula formula-p">ρ = m/V</span>
+        <span class="formula formula-q">f' = f · v/(v − vₛ)</span><span class="formula formula-r">τ = rF sin θ</span>
+        <span class="formula formula-s">n₁ sin θ₁ = n₂ sin θ₂</span><span class="formula formula-t">ΔU = Q − W</span>
+        <span class="formula formula-u">B = μ₀I/2πr</span><span class="formula formula-v">g ≈ 9,8 m/s²</span>
+      </div>
+      <div class="hero-copy"><div class="eyebrow"><span class="pulse"></span> PERSONAL STUDY JOURNEY</div><h1>Setiap level,<br><span>satu langkah lebih siap.</span></h1><p>Pelajari konsep, dengarkan penjelasan, uji pemahaman, lalu kerjakan soal buku sesuai urutannya.</p></div>
+      <div class="hero-side">
+        <div class="atom-showcase" role="img" aria-label="Animasi atom dengan elektron bergerak mengelilingi inti">
+          <div class="atom-glow"></div><div class="atom-orbit atom-orbit-x"><i></i></div><div class="atom-orbit atom-orbit-y"><i></i></div><div class="atom-orbit atom-orbit-z"><i></i></div><div class="atom-nucleus">Φ</div><span class="atom-caption">PHYSICS IN MOTION</span>
+        </div>
+        <div class="hero-progress"><div class="progress-ring" id="progressRing"><div><strong id="progressPercent">0%</strong><small>PROGRES</small></div></div><div class="progress-copy"><b id="progressLabel">Mulai perjalananmu</b><span id="progressSub">Progres belajarmu tersimpan di perangkat ini.</span></div></div>
+      </div>
+    </div>
+  </section>
+  <div class="brand-marquee" aria-label="Irza Learning — teks berjalan"><div class="brand-marquee-track"><span>IRZA LEARNING <i>✦</i> FISIKA <i>✦</i> TKA <i>✦</i> THINK · EXPLORE · MASTER <i>✦</i> IRZA LEARNING <i>✦</i> FISIKA <i>✦</i></span><span aria-hidden="true">IRZA LEARNING <i>✦</i> FISIKA <i>✦</i> TKA <i>✦</i> THINK · EXPLORE · MASTER <i>✦</i> IRZA LEARNING <i>✦</i> FISIKA <i>✦</i></span></div></div>
+  <nav class="tabs" aria-label="Navigasi utama"><button class="tab active" data-view="map">JALUR BELAJAR</button><button class="tab" data-view="kisi">KISI-KISI PUSMENDIK</button><button class="tab" data-view="tryout">TRY OUT & DRILLING</button><button class="tab" data-view="progress">PROGRES <span class="mini-dot"></span></button></nav>
+  <section id="mapView" class="view">
+    <div class="map-intro"><div><div class="section-kicker">PETA MATERI BUKU</div><h2>Pilih bab sesukamu</h2><p>Tak perlu menyelesaikan level sebelumnya. Pilih bab mana pun untuk membuka materi atau melihat status pemetaannya.</p></div><span class="map-legend"><i class="legend-dot unlocked"></i> Materi tersedia <i class="legend-dot locked"></i> Sedang disiapkan</span></div>
+    <div class="content-tracker" id="contentTracker"><div class="tracker-item"><small>MATERI BAB TERVERIFIKASI</small><b id="contentReadyCount">3 / 15 bab</b></div><div class="tracker-separator"></div><div class="tracker-item"><small>SOAL PAKET TERDIGITALISASI</small><b id="drillReadyCount">28 / 139 soal</b></div><p>Jumlah akan bertambah saat transkripsi dan pemeriksaan halaman sumber selesai.</p></div>
+    <div class="map-layout">
+      <div class="journey-map" id="journeyMap"><svg class="map-path" viewBox="0 0 600 980" preserveAspectRatio="none" aria-hidden="true"><path d="M310 55 C420 100 425 145 295 200 S170 300 290 360 S425 470 300 520 S170 630 295 680 S420 785 300 840 S180 910 295 950" /></svg><div id="levelNodes" class="level-nodes"></div></div>
+      <aside class="level-preview panel">
+        <div class="preview-top"><span class="level-chip" id="previewNumber">LEVEL 01</span><span class="status-chip" id="previewStatus">TERSEDIA</span></div>
+        <div class="preview-art" id="previewArt"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="orb-core">Φ</div><div class="spark spark-a"></div><div class="spark spark-b"></div></div>
+        <div class="section-kicker">LEVEL TERPILIH</div><h2 id="previewTitle">Ketelitian Ukur dan Angka Penting</h2><p id="previewDescription">Mulai dengan membaca materi, dengarkan penjelasan, lalu kerjakan kuis.</p>
+        <div class="preview-meta"><span><b id="previewLessons">1</b> materi</span><span><b id="previewQuiz">1</b> kuis contoh</span><span><b id="previewBook">Menunggu</b> soal buku</span></div>
+        <div class="source-warning"><strong>Catatan sumber</strong><p id="sourceStatus">Alur level ini contoh antarmuka. Isi dan urutan asli buku belum diverifikasi.</p></div>
+        <button id="openLevel" class="primary-btn wide">Mulai level <span>→</span></button>
+      </aside>
+    </div>
+  </section>
+  <section id="tryoutView" class="view hidden">
+    <div class="section-kicker">RUANG LATIHAN MANDIRI</div><h2>Try Out & Drilling Soal</h2>
+    <p class="subtext">Pilih paket berdasarkan buku. Soal yang sudah terbaca dapat langsung dikerjakan; paket lain tetap terlihat sambil transkripsi halaman diselesaikan.</p>
+    <div class="tryout-callout"><span class="pulse"></span><div><b>Mode drilling</b><span>Kerjakan soal satu per satu, gunakan petunjuk jika buntu, dan ulangi soal yang belum dikuasai. Jawaban tidak ditampilkan di awal.</span></div></div>
+    <div class="package-filters" id="packageFilters">
+      <button class="filter-chip active" data-filter="semua">Semua paket</button>
+      <button class="filter-chip" data-filter="latihan">Pendalaman & Intensif</button>
+      <button class="filter-chip" data-filter="simulasi">Simulasi</button>
+      <button class="filter-chip" data-filter="bab">Drilling per Bab</button>
+      <button class="filter-chip" data-filter="prediksi">Prediksi</button>
+    </div>
+    <div class="package-grid" id="packageGrid"></div>
+    <div class="panel package-detail hidden" id="packageDetail">
+      <button class="back-link" id="backToPackages">← Kembali ke semua paket</button>
+      <div class="package-detail-head"><div><div class="section-kicker" id="packageDetailKicker">PAKET SOAL</div><h2 id="packageDetailTitle"></h2><p id="packageDetailLead"></p></div><div class="package-stat"><strong id="packageQuestionCount">0</strong><span>soal digital</span></div></div>
+      <div id="packageQuestionList" class="package-question-list"></div>
+    </div>
+  </section>
+  <section id="officialView" class="view hidden">
+    <div class="section-kicker">RUJUKAN ASESMEN RESMI</div>
+    <h2>Kisi-kisi TKA Fisika · Pusmendik</h2>
+    <p class="subtext">Peta belajar Irza Learning membedakan cakupan resmi TKA, letak materi di buku, dan soal prediksi yang dibuat untuk latihan. Ringkasan berikut merujuk pada halaman resmi Pusmendik; periksa laman tersebut jika ada pembaruan.</p>
+    <div class="panel official-source-card">
+      <div><span class="status-chip blue">SUMBER PRIMER</span><h3>TKA Fisika SMA/MA/sederajat dan SMK/MAK</h3><p>Definisi, muatan, kompetensi, level kognitif, matriks asesmen, serta contoh soal.</p></div>
+      <a href="https://pusmendik.kemendikdasmen.go.id/tka/tka/view/mata-pelajaran-pilihan/sma/fisika" target="_blank" rel="noopener noreferrer">Buka laman Pusmendik ↗</a>
+    </div>
+    <div class="official-four-grid">
+      <article class="panel official-info-card"><span class="section-kicker">KOMPETENSI</span><h3>Yang diukur</h3><ul><li>Pemahaman konseptual</li><li>Penerapan prinsip fisika</li><li>Analisis dan evaluasi fenomena</li><li>Keterampilan proses sains</li></ul></article>
+      <article class="panel official-info-card"><span class="section-kicker">KONTEKS</span><h3>Tempat konsep dipakai</h3><ul><li>Fenomena fisika di lingkungan</li><li>Makhluk hidup</li><li>Teknologi</li><li>Percobaan dan penyelidikan</li></ul></article>
+    </div>
+    <h3 class="official-section-title">Tiga level kognitif</h3>
+    <div class="official-three-grid">
+      <article class="panel official-info-card"><span class="official-level">LEVEL 1</span><h3>Pemahaman</h3><p>Mengingat dan mengklasifikasikan konsep, menjelaskan prinsip, atau hubungan dasar tanpa analisis mendalam.</p></article>
+      <article class="panel official-info-card"><span class="official-level">LEVEL 2</span><h3>Penerapan</h3><p>Memilih konsep yang sesuai dan menggunakannya untuk menyelesaikan masalah kontekstual melalui perhitungan.</p></article>
+      <article class="panel official-info-card"><span class="official-level">LEVEL 3</span><h3>Analisis dan Evaluasi</h3><p>Menganalisis hubungan antarbesaran, menilai alasan atau model fisika, dan menarik kesimpulan berdasarkan bukti.</p></article>
+    </div>
+    <h3 class="official-section-title">Pemetaan muatan resmi ke peta materi Irza Learning</h3>
+    <div class="official-table-wrap"><table class="official-table"><thead><tr><th>Muatan</th><th>Cakupan yang tercantum di Pusmendik</th><th>Bab Irza Learning / buku</th></tr></thead><tbody>
+      <tr><td><b>Kinematika</b></td><td>Pengukuran; posisi, kecepatan dan percepatan; gerak lurus, parabola, dan melingkar beraturan.</td><td>Pengukuran (hlm. 3), Gerak Lurus (hlm. 6), Gerak Lengkung (hlm. 8).</td></tr>
+      <tr><td><b>Dinamika</b></td><td>Hubungan gaya dan gerak menurut hukum Newton serta momentum dan impuls.</td><td>Hukum Newton (hlm. 11), Momentum dan Impuls (hlm. 14). Momen gaya/rotasi tetap dipelajari sebagai bagian buku dan konteks penerapan.</td></tr>
+      <tr><td><b>Fluida</b></td><td>Fluida statis dan dinamis: tekanan, Pascal, Archimedes, kontinuitas, dan Bernoulli dalam aplikasi sehari-hari.</td><td>Fluida (hlm. 18–20).</td></tr>
+      <tr><td><b>Gelombang</b></td><td>Karakteristik gelombang mekanik dan elektromagnetik, termasuk bunyi, cahaya, dan aplikasinya.</td><td>Gelombang Bunyi (hlm. 21–24) dan Gelombang Cahaya (hlm. 25–30).</td></tr>
+      <tr><td><b>Kalor dan Termodinamika</b></td><td>Perubahan suhu dan wujud, pemuaian, perpindahan kalor/pencampuran; efek rumah kaca; hukum gas ideal; proses termodinamika dan mesin kalor.</td><td>Kalor (hlm. 31–33), Pemanasan Global (hlm. 34–37), Gas Ideal (hlm. 37–39), Termodinamika (hlm. 40–43).</td></tr>
+      <tr><td><b>Kelistrikan</b></td><td>Listrik statis; medan dan potensial; rangkaian arus searah, Hukum Ohm/Kirchhoff pada rangkaian campuran seri-paralel hingga daya.</td><td>Listrik Statis (hlm. 44–47), Rangkaian Arus Searah (hlm. 48–51).</td></tr>
+    </tbody></table></div>
+    <div class="source-warning"><strong>Batasan penting</strong><p>Rangkaian Arus Searah di peta prediksi dibatasi pada arus searah, rangkaian campuran seri-paralel, Hukum Ohm/Kirchhoff, dan perhitungan daya sesuai catatan resmi. Topik tambahan yang ada di buku tidak otomatis berarti menjadi fokus eksplisit pada matriks resmi.</p></div>
+    <h3 class="official-section-title">Format soal yang dilatih</h3>
+    <div class="official-three-grid">
+      <article class="panel official-info-card"><span class="official-level">PG</span><h3>Pilihan Ganda</h3><p>Satu jawaban benar. Biasanya meminta hasil perhitungan atau kesimpulan paling tepat.</p></article>
+      <article class="panel official-info-card"><span class="official-level">PGK MCMA</span><h3>Pilihan Ganda Kompleks</h3><p>Pilih semua opsi yang benar; jawaban dapat lebih dari satu.</p></article>
+      <article class="panel official-info-card"><span class="official-level">PGK Kategori</span><h3>Benar / Salah</h3><p>Nilai setiap pernyataan berdasarkan stimulus, data, atau alasan fisika.</p></article>
+    </div>
+    <p class="official-note">Pusmendik menyatakan TKA mengukur kompetensi mata pelajaran, bukan literasi/numerasi umum; namun soal tetap menekankan penalaran dan pemecahan masalah. Soal dalam paket prediksi Irza Learning adalah soal latihan baru, bukan soal resmi atau bocoran.</p>
+  </section>
+  <section id="lessonView" class="view hidden">
+    <button class="back-link" id="backToMap">← Kembali ke peta</button>
+    <div class="lesson-heading"><div><div class="section-kicker" id="lessonEyebrow">LEVEL 01 · MATERI 01</div><h2 id="lessonTitle">Ketelitian Ukur dan Angka Penting</h2><p id="lessonLead">Baca dan dengarkan materi sebelum mulai kuis.</p></div><span class="lesson-icon">▤</span></div>
+    <div class="lesson-columns">
+      <article class="panel lesson-card">
+        <div class="lesson-card-head"><span class="status-chip blue">MATERI</span><span class="read-time">BACA DENGAN TENANG</span></div>
+        <div id="lessonContent" class="lesson-content"></div>
+        <div class="audio-controls"><button id="readAloud" class="secondary-btn">▶ Dengarkan materi</button><button id="pauseAudio" class="quiet-btn" disabled>Jeda</button><button id="stopAudio" class="quiet-btn" disabled>Berhenti</button></div>
+        <p id="audioStatus" class="audio-status" aria-live="polite">Fitur suara menggunakan pembaca teks pada browser/perangkat.</p>
+        <div class="lesson-actions"><button id="markRead" class="secondary-btn">Tandai sudah dibaca ✓</button><button id="toQuiz" class="primary-btn">Lanjut ke kuis →</button></div>
+      </article>
+      <aside class="panel study-rail">
+        <div class="section-kicker">URUTAN BELAJAR</div><div class="rail-step current"><span>01</span><div><b>Pelajari materi</b><small>Baca atau dengarkan</small></div></div><div class="rail-line"></div><div class="rail-step"><span>02</span><div><b>Kuis pemahaman</b><small>Coba jawab mandiri</small></div></div><div class="rail-line"></div><div class="rail-step"><span>03</span><div><b>Soal asli buku</b><small>Urut berdasarkan halaman</small></div></div>
+        <div class="source-warning"><strong>Soal asli buku</strong><p>Soal akan tampil setelah foto diurutkan dan nomor halaman, nomor soal, serta pilihan jawabannya diverifikasi.</p></div>
+      </aside>
+    </div>
+  </section>
+  <section id="quizView" class="view hidden">
+    <button class="back-link" id="backToLesson">← Kembali ke materi</button>
+    <div class="quiz-shell panel">
+      <div class="quiz-top"><span class="status-chip blue">KUIS PEMAHAMAN</span><span id="quizCounter" class="read-time">PERTANYAAN DEMO</span></div>
+      <div class="quiz-progress"><span id="quizProgressFill"></span></div>
+      <div class="section-kicker" id="quizTopic">LEVEL 01</div><h2 id="questionText">Pertanyaan akan tampil di sini</h2><p id="questionContext" class="question-context"></p>
+      <div id="choices" class="choices"></div>
+      <div id="quizFeedback" class="quiz-feedback hidden" aria-live="polite"></div>
+      <div id="hintBox" class="hint-box hidden" aria-live="polite"><div class="hint-heading">PETUNJUK BERTAHAP <span id="hintStep">1/3</span></div><p id="hintText"></p><button id="nextHint" class="quiet-btn">Petunjuk berikutnya</button></div>
+      <div class="quiz-actions"><button id="hintButton" class="secondary-btn">Bingung? Beri tahu caranya</button><button id="checkAnswer" class="primary-btn">Periksa jawaban</button></div>
+      <div id="quizComplete" class="quiz-complete hidden"><div class="complete-icon">✓</div><h3>Level berhasil diselesaikan</h3><p>Kuis demo lulus. Level selanjutnya terbuka; soal buku asli akan diaktifkan setelah indeks halaman selesai diverifikasi.</p><button id="continueAfterQuiz" class="primary-btn wide">Kembali ke peta →</button></div>
+      <div class="demo-tag" id="quizSourceTag">KUIS PEMAHAMAN · SUMBER DAN STATUS TAMPIL DI SINI</div>
+    </div>
+  </section>
+  <section id="progressView" class="view hidden">
+    <div class="section-kicker">RINGKASAN PERJALANAN</div><h2>Progres belajarmu</h2><p class="subtext">Catatan disimpan di browser perangkat ini.</p>
+    <div class="progress-cards"><div class="panel progress-stat"><small>LEVEL BISA DIAKSES</small><strong id="openedCount">1</strong><span>Level</span></div><div class="panel progress-stat"><small>KUIS LULUS</small><strong id="passedCount">0</strong><span>Kuis</span></div><div class="panel progress-stat"><small>MATERI DIBACA</small><strong id="readCount">0</strong><span>Materi</span></div></div>
+    <div class="panel progress-list-panel"><div class="section-kicker">DAFTAR LEVEL</div><div id="progressList"></div></div>
+    <button id="resetProgress" class="quiet-btn reset-btn">Atur ulang progres</button>
+  </section>
+  <footer><span>IRZA LEARNING</span><span>Belajar bertahap · Fisika dalam gerak</span></footer>
+</main>
+<script src="./app.js"></script><script src="./drilling.js"></script>
+</body>
+</html>
